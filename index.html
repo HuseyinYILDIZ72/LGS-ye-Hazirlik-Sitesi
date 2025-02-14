@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGS'ye Hazırlık Sitesi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-screen">
+        <h1>LGS'ye Hazırlık Sitesi</h1>
+        <form id="login-form">
+            <input type="password" id="password" placeholder="Şifre">
+            <button type="submit">Giriş Yap</button>
+        </form>
+    </div>
+
+    <div id="main-content" class="hidden">
+        <header>
+            <h1>LGS'ye Hazırlık Sitesi</h1>
+            <button id="logout">Çıkış Yap</button>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#turkce"><i class="fas fa-book"></i> Türkçe</a></li>
+                <li><a href="#matematik"><i class="fas fa-calculator"></i> Matematik</a></li>
+                <li><a href="#fen"><i class="fas fa-flask"></i> Fen Bilimleri</a></li>
+                <li><a href="#sosyal"><i class="fas fa-globe"></i> Sosyal Bilgiler</a></li>
+                <li><a href="#ingilizce"><i class="fas fa-language"></i> İngilizce</a></li>
+                <li><a href="#din"><i class="fas fa-praying-hands"></i> Din Kültürü</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="turkce" class="section">
+                <h2><i class="fas fa-book"></i> Türkçe</h2>
+                <div class="content">
+                    <input type="file" id="turkce-file" class="input-file">
+                    <input type="text" id="turkce-topic" placeholder="Konu İsmi" class="input-text">
+                    <input type="text" id="turkce-video" placeholder="Video Linki" class="input-text">
+                    <button onclick="uploadFile('turkce')" class="btn-upload">Yükle</button>
+                    <ul id="turkce-list" class="file-list"></ul>
+                </div>
+            </section>
+            <section id="matematik" class="section">
+                <h2><i class="fas fa-calculator"></i> Matematik</h2>
+                <div class="content">
+                    <input type="file" id="matematik-file" class="input-file">
+                    <input type="text" id="matematik-topic" placeholder="Konu İsmi" class="input-text">
+                    <input type="text" id="matematik-video" placeholder="Video Linki" class="input-text">
+                    <button onclick="uploadFile('matematik')" class="btn-upload">Yükle</button>
+                    <ul id="matematik-list" class="file-list"></ul>
+                </div>
+            </section>
+            <section id="fen" class="section">
+                <h2><i class="fas fa-flask"></i> Fen Bilimleri</h2>
+                <div class="content">
+                    <input type="file" id="fen-file" class="input-file">
+                    <input type="text" id="fen-topic" placeholder="Konu İsmi" class="input-text">
+                    <input type="text" id="fen-video" placeholder="Video Linki" class="input-text">
+                    <button onclick="uploadFile('fen')" class="btn-upload">Yükle</button>
+                    <ul id="fen-list" class="file-list"></ul>
+                </div>
+            </section>
+            <section id="sosyal" class="section">
+                <h2><i class="fas fa-globe"></i> Sosyal Bilgiler</h2>
+                <div class="content">
+                    <input type="file" id="sosyal-file" class="input-file">
+                    <input type="text" id="sosyal-topic" placeholder="Konu İsmi" class="input-text">
+                    <input type="text" id="sosyal-video" placeholder="Video Linki" class="input-text">
+                    <button onclick="uploadFile('sosyal')" class="btn-upload">Yükle</button>
+                    <ul id="sosyal-list" class="file-list"></ul>
+                </div>
+            </section>
+            <section id="ingilizce" class="section">
+                <h2><i class="fas fa-language"></i> İngilizce</h2>
+                <div class="content">
+                    <input type="file" id="ingilizce-file" class="input-file">
+                    <input type="text" id="ingilizce-topic" placeholder="Konu İsmi" class="input-text">
+                    <input type="text" id="ingilizce-video" placeholder="Video Linki" class="input-text">
+                    <button onclick="uploadFile('ingilizce')" class="btn-upload">Yükle</button>
+                    <ul id="ingilizce-list" class="file-list"></ul>
+                </div>
+            </section>
+            <section id="din" class="section">
+                <h2><i class="fas fa-praying-hands"></i> Din Kültürü</h2>
+                <div class="content">
+                    <input type="file" id="din-file" class="input-file">
+                    <input type="text" id="din-topic" placeholder="Konu İsmi" class="input-text">
+                    <input type="text" id="din-video" placeholder="Video Linki" class="input-text">
+                    <button onclick="uploadFile('din')" class="btn-upload">Yükle</button>
+                    <ul id="din-list" class="file-list"></ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>Bu site Hüseyin Yıldız tarafından yapılmıştır.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

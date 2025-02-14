@@ -1,0 +1,284 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #243B55, #141E30);
+    margin: 0;
+    padding: 0;
+    color: #FFD700;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(135deg, #243B55, #141E30);
+    }
+    100% {
+        background: linear-gradient(135deg, #1F4E79, #0C1D36);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#login-screen {
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+#login-screen h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: textGlow 1.5s infinite alternate;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700;
+    }
+    100% {
+        text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700;
+    }
+}
+
+#login-form {
+    margin-top: 20px;
+    animation: slideIn 1s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#login-form input {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    border: 1px solid #FFD700;
+    border-radius: 5px;
+    background: rgba(255, 215, 0, 0.2);
+    color: #FFD700;
+    transition: background 0.3s ease;
+}
+
+#login-form input:focus {
+    background: rgba(255, 215, 0, 0.4);
+}
+
+#login-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #FFD700;
+    color: #141E30;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+#login-form button:hover {
+    background-color: #FFC700;
+    transform: scale(1.05);
+}
+
+#main-content {
+    width: 90%;
+    margin: 20px auto;
+    animation: fadeIn 1s ease;
+    background-color: rgba(20, 30, 48, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #FFD700;
+    animation: textGlow 1.5s infinite alternate;
+}
+
+header button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #FFD700;
+    color: #141E30;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+header button:hover {
+    background-color: #FFC700;
+    transform: scale(1.05);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style: none;
+    background-color: rgba(20, 30, 48, 0.8);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    padding: 10px;
+    animation: fadeIn 1s ease;
+}
+
+nav ul li a {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 1.5em;
+    color: #FFD700;
+    display: flex;
+    align-items: center;
+    animation: fadeIn 1s ease;
+}
+
+.section h2 i {
+    margin-right: 10px;
+}
+
+.content {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: rgba(20, 30, 48, 0.8);
+    border-radius: 10px;
+    animation: fadeIn 1s ease;
+}
+
+.input-file,
+.input-text {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    border: 1px solid #FFD700;
+    border-radius: 5px;
+    background: rgba(255, 215, 0, 0.2);
+    color: #FFD700;
+    transition: background 0.3s ease;
+}
+
+.input-file:focus,
+.input-text:focus {
+    background: rgba(255, 215, 0, 0.4);
+}
+
+.btn-upload {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #FFD700;
+    color: #141E30;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.btn-upload:hover {
+    background-color: #FFC700;
+    transform: scale(1.05);
+}
+
+.file-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.file-list li {
+    background-color: rgba(255, 215, 0, 0.1);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    animation: fadeIn 1s ease;
+}
+
+.file-list li div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-list li span {
+    flex-grow: 1;
+    color: #FFD700;
+}
+
+.file-list li a {
+    color: #FFD700;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.file-list li button {
+    padding: 5px 10px;
+    font-size: 0.8em;
+    background-color: #ff5e57;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.file-list li button:hover {
+    background-color: #ff3b3b;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #FFD700;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
